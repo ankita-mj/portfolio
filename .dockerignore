@@ -1,0 +1,53 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose.yml
+docker-compose.*.yml
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+*~
+
+# Dependencies
+node_modules
+vendor
+
+# Laravel
+.env
+.env.*
+!.env.example
+storage/*.key
+storage/logs/*
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/framework/views/*
+bootstrap/cache/*
+!storage/framework/cache/.gitignore
+!storage/framework/sessions/.gitignore
+!storage/framework/views/.gitignore
+
+# Testing
+.phpunit.result.cache
+tests
+
+# Build artifacts
+public/hot
+public/storage
+public/build
+public/mix-manifest.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Documentation
+README.md
+*.md
