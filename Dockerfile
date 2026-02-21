@@ -1,16 +1,19 @@
 FROM php:8.2-fpm
 
 # Install system dependencies and PHP extensions required by Laravel
-RUN apt-get update && apt-get install -y \
-    git curl unzip libzip-dev zip libxml2-dev libpng-dev libonig-dev \
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    git \
+    curl \
+    unzip \
+    libzip-dev \
+    zip \
+    libxml2-dev \
+    libpng-dev \
+    libonig-dev \
     && docker-php-ext-install \
         mbstring \
         zip \
         pdo_mysql \
-        tokenizer \
-        xml \
-        ctype \
-        fileinfo \
         opcache \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
